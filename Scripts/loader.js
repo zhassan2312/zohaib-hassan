@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     onComplete: () => {
                         loaderText.textContent = "welcome";
                         gsap.to(loaderText, {
-                            duration: 0.5,
+                            duration: 0.2,
                             opacity: 0,
                             delay: 0.1,
                             onComplete: () => {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     onComplete: () => {
                                         loaderText.textContent = "to";
                                         gsap.to(loaderText, {
-                                            duration: 0.5,
+                                            duration: 0.2,
                                             opacity: 0,
                                             delay: 0.1,
                                             onComplete: () => {
@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                                     opacity: 1,
                                                     onComplete: () => {
                                                         
-                                                                        loaderText.textContent = "ZOHAIB's";
+                                                                        loaderText.textContent = "interactive";
                                                                         gsap.to(loaderText, {
-                                                                            duration: 0.5,
+                                                                            duration: 0.2,
                                                                             opacity: 0,
                                                                             delay: 0.1,
                                                                             onComplete: () => {
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                                                                     onComplete: () => {
                                                                                         loaderText.textContent = "world";
                                                                                         gsap.to(loaderText, {
-                                                                                            duration: 0.5,
+                                                                                            duration: 0.2,
                                                                                             opacity: 0,
                                                                                             delay: 0.1,
                                                                                             onComplete: () => {

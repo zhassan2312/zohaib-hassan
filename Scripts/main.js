@@ -1,78 +1,117 @@
-document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-    const locoScroll = new LocomotiveScroll({
-        el: document.querySelector('#main'),
-        smooth: true,
-        lerp: 0.1,
-    });
+const locoScroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true,
+    lerp: 0.1,
+});
 
-    locoScroll.on("scroll", ScrollTrigger.update);
+locoScroll.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy("#main", {
-        scrollTop(value) {
-            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-        },
-        getBoundingClientRect() {
-            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-        },
-        pinType: document.querySelector("#main").style.transform ? "transform" : "fixed",
-    });
+ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed",
+});
 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-    ScrollTrigger.refresh();
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ScrollTrigger.refresh();
 
-    // Vertical scrolling until page1
-    ScrollTrigger.create({
-        trigger: "#page1",
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        scroller: "#main",
-    });
+// Vertical scrolling until page1
+ScrollTrigger.create({
+    trigger: "#page1",
+    start: "top top",
+    end: "bottom top",
+    pin: true,
+    scroller: "#main",
+});
 
-// Horizontal scrolling for portfolioSection
+// Horizontal scrolling for horizontalSection
 const sliderWrapper = document.getElementById("sliderWrapper");
 const slider = document.getElementById('slider');
-const sliderItems = sliderWrapper.children; // Get all child elements of sliderWrapper
-const totalWidth = slider.scrollWidth; // Use scrollWidth to get the full width of the content
+const sliderItems = sliderWrapper.children;
+const totalWidth = slider.scrollWidth;
 
 gsap.to(sliderWrapper, {
-    x: () => -(totalWidth - window.innerWidth), // Calculate the horizontal scroll distance
+    x: () => -(totalWidth - window.innerWidth),
     ease: "none",
     scrollTrigger: {
-        trigger: "#portfolioSection",
+        trigger: "#horizontalSection",
         scroller: "#main",
         scrub: 4,
         pin: true,
         start: "top top",
-        end: () => "+=" + (totalWidth - window.innerWidth), // Adjust the end value
+        end: () => "+=" + (totalWidth - window.innerWidth),
         onUpdate: self => {
             const progress = self.progress * 100;
             document.querySelector("#progressBar").style.width = progress + "%";
 
-            // Apply glitch effect to each slider item
             Array.from(sliderItems).forEach(item => {
-                const scale = 1 - (self.progress * 0.2); // Shrink based on scroll progress
-                const bounce = Math.sin(self.progress * Math.PI * 8) * 0.1; // Quick bounce effect
+                const scale = 1 - (self.progress * 0.2);
+                const bounce = Math.sin(self.progress * Math.PI * 8) * 0.1;
                 gsap.set(item, {
                     scale: scale + bounce,
-                    y: bounce * 20 // Adjust the y position for a more pronounced bounce
+                    y: bounce * 20
                 });
             });
         }
     }
 });
 
-    // Resume vertical scrolling after portfolioSection
-    ScrollTrigger.create({
-        trigger: "#portfolioSection",
-        start: "bottom bottom",
-        end: "bottom top",
+// Horizontal scrolling for testimonialsSection
+const testimonialsWrapper = document.querySelector(".testimonialsSection #sliderWrapper");
+const testimonialsSlider = document.querySelector(".testimonialsSection #slider");
+const testimonialsItems = testimonialsWrapper.children;
+const testimonialsTotalWidth = testimonialsSlider.scrollWidth;
+
+gsap.to(testimonialsWrapper, {
+    x: () => -(testimonialsTotalWidth - window.innerWidth),
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".testimonialsSection",
         scroller: "#main",
-        onEnter: () => locoScroll.update(),
-        onLeaveBack: () => locoScroll.update(),
-    });
+        scrub: 4,
+        pin: true,
+        start: "top top",
+        end: () => "+=" + (testimonialsTotalWidth - window.innerWidth),
+        onUpdate: self => {
+            const progress = self.progress * 100;
+            document.querySelector("#progressBar").style.width = progress + "%";
+
+            Array.from(testimonialsItems).forEach(item => {
+                const scale = 1 - (self.progress * 0.2);
+                const bounce = Math.sin(self.progress * Math.PI * 8) * 0.1;
+                gsap.set(item, {
+                    scale: scale + bounce,
+                    y: bounce * 20
+                });
+            });
+        }
+    }
+});
+
+// Resume vertical scrolling after testimonialsSection
+ScrollTrigger.create({
+    trigger: ".testimonialsSection",
+    start: "bottom bottom",
+    end: "bottom top",
+    scroller: "#main",
+    onEnter: () => locoScroll.update(),
+    onLeaveBack: () => locoScroll.update(),
+});
+
+// Toggle dark-theme class when testimonials section is reached
+ScrollTrigger.create({
+    trigger: ".testimonialsSection",
+    scroller: "#main",
+    onEnter: () => document.body.classList.add("dark-theme"),
+
+});
+
 
     const canvas = document.querySelector("#myCanvas");
     if (canvas) {
@@ -306,7 +345,7 @@ gsap.to(sliderWrapper, {
     });
 
     // Apply hover effect to paragraph spans
-    const p = document.querySelector('#portfolioHeader p');
+    const p = document.querySelector('#horizontalHeader p');
     const ptext = p.textContent;
     const originalPHTML = p.innerHTML;
     p.innerHTML = ptext.split('').map(char => `<span>${char}</span>`).join('');
@@ -315,7 +354,7 @@ gsap.to(sliderWrapper, {
 
 
   // Apply hover effect to h1 spans
-  const h1 = document.querySelector('#portfolioHeader h1');
+  const h1 = document.querySelector('#horizontalHeader h1');
   const text = h1.textContent;
   const originalH1HTML = h1.innerHTML;
   h1.innerHTML = text.split('').map(char => `<span>${char}</span>`).join('');
@@ -323,7 +362,7 @@ gsap.to(sliderWrapper, {
   addHoverEffect(spans);
 
   // Add event listener to reset button
-  const resetButton = document.querySelector('#portfolioHeader button');
+  const resetButton = document.querySelector('#horizontalHeader button');
   resetButton.addEventListener('click', () => {
     h1.innerHTML = originalH1HTML;
     p.innerHTML = originalPHTML;
@@ -338,7 +377,8 @@ gsap.to(sliderWrapper, {
     addHoverEffect(spans);
   });
 
-});
+
+
 
 // Function to add hover effect to spans
 function addHoverEffect(spans) {

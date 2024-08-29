@@ -1,9 +1,9 @@
 #slider {
     width: 100%;
     overflow: hidden;
-    background-color: var(--white);
     height: 100vh;
     position: relative;
+    background-color: var(--white);
 }
 
 #sliderWrapper {
@@ -13,11 +13,12 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
     gap: 200px;
+    background-color: var(--white);
 }
 
-#portfolioSection {
+
+#horizontalSection {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -74,18 +75,18 @@
     color: var(--white);
 }
 
-#portfolioHeader {
+#horizontalHeader {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 2%;
-    margin-top: 2%;
+    margin-left: 10vw;
+    margin-top: 30vh;
     vertical-align: center;
     width: 100vw;
     height: 100vh;
 }
 
-#portfolioHeader h1 {
+#horizontalHeader h1 {
     font-size: 15vw; /* Adjust font size based on viewport width */
     font-family: var(--font1);
     font-weight: bold;
@@ -97,11 +98,11 @@
     transform-style: preserve-3d;
 }
 
-#portfolioHeader h1 span {
+#horizontalHeader h1 span {
     color: var(--primary);
 }
 
-#portfolioHeader p {
+#horizontalHeader p {
     font-size: 9vw; /* Adjust font size based on viewport width */
     font-family: var(--font1);
     color: transparent;
@@ -112,7 +113,7 @@
     overflow: hidden;
 }
 
-#portfolioHeader button {
+#horizontalHeader button {
     font-family: var(--font1);
     font-size: 1.5vw; /* Adjust font size based on viewport width */
     color: var(--primary10);
