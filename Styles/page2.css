@@ -1,0 +1,112 @@
+#page2 {
+    width: 100vw;
+    z-index: 10;
+    height: 100vh;
+    background-color: #ff4500;
+
+    overflow: hidden;
+    position: relative;
+}
+
+#pageContainer
+{
+    top:32px;
+    display: flex;
+    position:relative;
+    width: 100vw;
+    height: auto;
+    background-color: #ff4500;
+
+}
+
+
+
+#videoContainer
+{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    right:32px;
+    top:20%;
+}
+
+
+#video
+{
+    width: 100%;
+    border-radius: 16px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+#infoContainer
+{
+    max-width:44%;
+    width: 100%;
+    position: absolute;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap:64px;
+    top:30%;
+}
+
+#infoContainer h1
+{
+    font-family: var(--font1);
+    font-size: 69px;
+    color: var(--white);
+}
+
+#learnMore {
+    font-family: var(--font1);
+    font-size: 15px;
+    background-color: #f48056;
+    color: white;
+    padding: 32px;
+    border-radius: 50%; /* Set border-radius to 50% to make it circular */
+    border: none;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    display: flex; /* Center the text inside the circle */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    text-align: center; /* Ensure text is centered */
+    position: relative; /* Ensure positioning context for child elements */
+    overflow: hidden; /* Hide overflow */
+    transition: background-color 0.8s ease; /* Smooth transition for the background-color */
+}
+
+.btn-fill {
+    position: absolute; /* Position absolutely within the button */
+    transition: transform 0.8s ease; /* Smooth transition for the transform */
+}
+
+#learnMore::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, var(--white) 0%, var(--white) 100%);
+    transition: transform 0.8s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+#learnMore:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#learnMore:hover {
+    color: #ff4500; /* Change text color on hover */
+}
+
+#learnMore .btn-fill {
+    position: relative;
+    z-index: 1;
+}
+

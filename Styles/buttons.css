@@ -1,0 +1,29 @@
+#primaryButton
+{
+    background-color: transparent;
+    color: var(--black);
+    border: 2px solid var(--black);
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:12px;
+    cursor: pointer;
+    font-family: var(--font1);
+    font-weight: bold;
+    font-size: 28px;
+    border-radius: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#primaryButton:hover
+{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#buttonIcon
+{
+    width: 24px;
+    height: 24px;
+}

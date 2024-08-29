@@ -1,0 +1,141 @@
+#slider {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--white);
+    height: 100vh;
+    position: relative;
+}
+
+#sliderWrapper {
+    display: inline-flex; /* Allow horizontal scrolling */
+    width: max-content;
+    padding: 0 128px 0 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    gap: 200px;
+}
+
+#portfolioSection {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw; /* Adjust gap based on viewport width */
+    width: 30vw; /* Adjust width based on viewport width */
+    height: auto;
+    border-radius: 8px;
+}
+
+#portfolioHeading {
+    font-size: 3vw; /* Adjust font size based on viewport width */
+    font-family: var(--font1);
+    font-weight: 200;
+    color: var(--black);
+    transition: color 0.5s;
+}
+
+#portfolioType {
+    font-size: 1.5vw; /* Adjust font size based on viewport width */
+    font-family: var(--font2);
+    color: var(--black60);
+    transition: color 0.5s;
+}
+
+#portfolioVideo {
+    width: 100%;
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    object-fit: cover; /* Ensure the video covers the entire container */
+    aspect-ratio: 4 / 3; /* Maintain 4:3 aspect ratio */
+    opacity: 50%;
+    transition: opacity 1s, transform 1s;
+}
+
+#portfolio:hover #portfolioVideo {
+    opacity: 1;
+    transform: scale(1.4);
+    z-index: 3;
+    position: relative;
+}
+
+#portfolio:hover #portfolioHeading {
+    color: var(--white);
+}
+
+#portfolio:hover #portfolioType {
+    color: var(--white);
+}
+
+#portfolioHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2%;
+    margin-top: 2%;
+    vertical-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#portfolioHeader h1 {
+    font-size: 15vw; /* Adjust font size based on viewport width */
+    font-family: var(--font1);
+    font-weight: bold;
+    color: var(--black);
+    transition: color 0.5s, -webkit-text-stroke-color 0.5s;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+#portfolioHeader h1 span {
+    color: var(--primary);
+}
+
+#portfolioHeader p {
+    font-size: 9vw; /* Adjust font size based on viewport width */
+    font-family: var(--font1);
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--black);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#portfolioHeader button {
+    font-family: var(--font1);
+    font-size: 1.5vw; /* Adjust font size based on viewport width */
+    color: var(--primary10);
+    background-color: var(--black);
+    padding: 0.5vw 1vw; /* Adjust padding based on viewport width */
+    border-radius: 8px;
+    border: 1px solid var(--black);
+    cursor: pointer;
+}
+
+#progressBarContainer {
+    position: absolute;
+    bottom: 8%;
+    width: 50%;
+    left: 20%;
+    height: 4px;
+    border-radius: 8px;
+    background-color: var(--black10);
+}
+
+#progressBar {
+    border-radius: 8px;
+    width: 0;
+    height: 100%;
+    background-color: var(--black);
+}

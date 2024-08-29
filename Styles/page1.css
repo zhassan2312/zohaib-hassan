@@ -1,0 +1,84 @@
+#leftContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:6vh;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top:2%;
+    left: 5%;
+    
+
+}
+
+#page1
+{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+#leftContainer h1
+{
+    font-family: var(--font1);
+    font-size:4.5vw;
+    color: var(--black80);
+}
+
+#leftContainer h1 span
+{
+    color: var(--primary);
+}
+
+#leftContainer p
+{
+    font-family: var(--font2);
+    font-size: 1vw;
+    color: var(--black60);
+}
+
+#leftContainer button
+{
+    z-index: 10;
+}
+#rightContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    gap: 6vh;
+    top:2%;
+    right: 5%;
+}
+
+#rightSubContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1vh;
+}
+
+#rightSubContainer h2
+{
+    font-family: var(--font1);
+    font-size: 4.5vw;
+    color: var(--primary);
+}
+
+#rightSubContainer p
+{
+    font-family: var(--font2);
+    font-size: 1vw;
+    color: var(--black60);
+}
