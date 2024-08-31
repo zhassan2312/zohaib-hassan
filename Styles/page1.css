@@ -28,19 +28,19 @@
 {
     font-family: var(--font1);
     font-size:4.5vw;
-    color: var(--black80);
+    color: var(--black10);
 }
 
 #leftContainer h1 span
 {
-    color: var(--primary);
+    color: var(--textColor);
 }
 
 #leftContainer p
 {
     font-family: var(--font2);
     font-size: 1vw;
-    color: var(--black60);
+    color: var(--black20);
 }
 
 #leftContainer button
@@ -74,12 +74,12 @@
 {
     font-family: var(--font1);
     font-size: 4.5vw;
-    color: var(--primary);
+    color: var(--textColor);
 }
 
 #rightSubContainer p
 {
     font-family: var(--font2);
     font-size: 1vw;
-    color: var(--black60);
+    color: var(--white);
 }

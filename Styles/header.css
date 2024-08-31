@@ -10,7 +10,7 @@
 #logoContainer
 {
     width:10vw;
-    height: 5vw;
+    height: 4vw;
 }
 
 #logo
@@ -22,35 +22,33 @@
 #menu
 {
     display: flex;
-    gap: 0.5vw;
+    gap: 1vw;
     justify-content: center;
     align-items: center;
 }
 
 #menu img
 {
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#menu img:hover
+{
     width: 3vw;
     height: 3vw;
 }
 
-#resume
+.resume
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    color: var(--white);
     font-size: 1vw;
-    font-family: var(--font1);
-    padding: 1vw 2vw;
-    background-color: var(--primary25);
-    color: var(--black80);
-    border:none;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: background-color 0.5s;
+    background-color: transparent;
+    border-radius: 4vw;
+    width:10vw;
+    height: 5vw;
+    border: none;
 }
 
-#resume:hover
-{
-    background-color: var(--primary50);
-}

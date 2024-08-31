@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js@8.17/dist/video-js.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
     <link rel="stylesheet" href="Styles/main.css">
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="Styles/horizontal-scroller.css">
     <link rel="stylesheet" href="Styles/testimonial-section.css">
     <link rel="stylesheet" href="Styles/loader.css">
+    <link rel="stylesheet" href="Styles/contact-section.css">
 
 
     
@@ -35,30 +36,58 @@
         <div id="page">
             <div id="header">
                 <div id="logoContainer">
-                    <img src="./Assets/logo.png" id="logo">
+                    <img src="./Assets/logo3.png" id="logo">
                 </div>
-                <button id="resume">Download Resume</button>
+                <button class="resume primaryButton"><span>Download Resume</span></button>
                 <div id="menu">
-                    <img src="./Assets/Icons/Behance.svg">
-                    <img src="./Assets/Icons/Dribbble.svg">
-                    <img src="./Assets/Icons/LinkedIn.svg">
-                    <img src="./Assets/Icons/Github.svg">
+                    <a href="https://www.behance.net/zhasasn2312" target="_blank">
+                        <img src="./Assets/Icons/behance.svg" alt="Behance">
+                    </a>
+                    <a href="https://www.dribble.com/zhasasn2312" target="_blank">
+                        <img src="./Assets/Icons/dribbble.svg" alt="Dribbble">
+                    </a>
+                    <a href="https://www.linkedin.com/in/zhasasn2312" target="_blank">
+                        <img src="./Assets/Icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.github.com/zhasasn2312" target="_blank">
+                        <img src="./Assets/Icons/github.svg" alt="GitHub">
+                    </a>
                 </div>
             </div>
-            <div id="hero">
-                <h3>Hi,</h3>
-                <h1> Its <span> Zohaib Hassan</span></h1>
-                <h2 class="textAnimation">I'm a <span></span></h2>
+                
+            <h2 class="textAnimation">I'm a <span></span></h2>
+            
+            <div class="marquee">
+                <div class="marquee-inner">
+                    <div class="marquee-part">
+                        Zohaib Hassan -&nbsp
+                    </div>
+                    <div class="marquee-part">
+                        Zohaib Hassan -&nbsp 
+                    </div>
+                    <div class="marquee-part">
+                        Zohaib Hassan -&nbsp 
+                    </div>
+                    <div class="marquee-part">
+                        Zohaib Hassan -&nbsp 
+                    </div>
+                    <div class="marquee-part">
+                        Zohaib Hassan -&nbsp 
+                    </div>
+                    <div class="marquee-part">
+                        Zohaib Hassan -&nbsp 
+                    </div>
+                </div>
             </div>
             
-                <button class="buttonWrapper1"id="primaryButton">
-                    <span>Hover Me</span>
-                </button>
+            <button class="buttonWrapper1 primaryButton">
+                <span>Let's Talk</span>
+            </button>
             <canvas id="myCanvas"></canvas>
         </div>
         <div id="page1">
             <div id="leftContainer">
-                <h1> About <span> me</span></h1>
+                <h1> About me</h1>
                 <p>
                     Unlock the power of doubling your impact with our revolutionary approach, proven to boost conversion rates by an impressive 2x! Experience unparalleled results as you engage your audience and drive action like never before. Our advanced web development and UI/UX design techniques are at the heart of this transformation, ensuring your digital presence is not only visually stunning but also highly functional and user-friendly. Don't settle for mediocre outcomes when you can amplify your success with our cutting-edge strategies. Join the ranks of thriving businesses, elevate your online experience, and maximize your potential today!
                 </p>
@@ -83,59 +112,10 @@
                 </div>
             </div>
         </div>
-        <div id="horizontalSection" data-scroll data-scroll-direction="horizontal">
+        <div id="horizontalSection" data-scroll data-scroll-speed="4">
             <div id="slider">
-                <div id="sliderWrapper">
-                    <div id="horizontalHeader" >
-                        <button>reset</button>
-                        <h1 data-text="Code X Design">Code X Design</h1>
-                        <p data-text="By Zohaib Hassan">By Zohaib Hassan</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Kolt Landing Page</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/Kolt Landing page.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">Branding</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Reddit Redesign</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/reddit (2).mp4" type="video/mp4"></video>
-                        <p id="portfolioType">UX Design</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Ebay Redesign</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/Ebay redesign.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">UX Design</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Twitch Redesign</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/twitch redesign.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">UX Design</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Turismo Dashboards</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/Turismo Dashbaords.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">Visual Design</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">ChemTech</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/ChemTech.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">Product Design</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Codexcue</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/Codexcue.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">Interaction Design</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Almaida Food App</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/Almaida food app.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">App Design</p>
-                    </div>
-                    <div id="portfolio" >
-                        <h1 id="portfolioHeading">Plantate</h1>
-                        <video id="portfolioVideo" src="./Assets/Portfolio/Plants animation websites.mp4" type="video/mp4"></video>
-                        <p id="portfolioType">Interaction Design</p>
-                    </div>
+                <div id="sliderWrapper" class="portfolioSlider">
+                    <!--JS generated-->
                 </div>
             </div>
             <div id="progressBarContainer">
@@ -146,113 +126,226 @@
             <div id="slider">
                 
                 <div id="sliderWrapper">
-                    <div id="horizontalHeader">
-                        <h1>Testimonials</h1>
-                        <p>What people say about me</p>
+                    <div id="horizontalHeader" class="testimonialsHeader">
+                        <h1 data-text="Testimonials">Testimonials</h1>
+                        <p data-text="What people say about me?">What people say about me?</p>
                     </div>
-                    <div id="testimonialCard" data-scroll data-scroll-speed="2">
+                    <div id="testimonialCard">
+                        <div class="hoverCircle">view</div>
                         <div id="testimonialHeader">
                             <div id="testimonialSubHeader">
                                 <img src="./Assets/man1.PNG" id="personImage">
                                 <div id="testimonialAbout">
-                                    <h1>John Doe</h1>
-                                    <p>CEO, Company</p>
+                                    <h1>Maxime Thomas</h1>
+                                    <p>CEO, Turismo</p>
                                 </div>
                             </div>
                             <p id="commas">"</p>
                         </div>
                         <p id="testimonialText">
-                            Zohaib is a talented designer who has a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work.
+                            "Zohaib is a talented designer who has a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work."
                         </p>
                     </div>
 
-                    <div id="testimonialCard" data-scroll data-scroll-speed="3">
+                    <div id="testimonialCard">
+                        <div class="hoverCircle">view</div>
                         <div id="testimonialHeader">
                             <div id="testimonialSubHeader">
-                                <img src="./Assets/man1.PNG" id="personImage">
+                                <img src="./Assets/man2.PNG" id="personImage">
                                 <div id="testimonialAbout">
-                                    <h1>John Doe</h1>
-                                    <p>CEO, Company</p>
+                                    <h1>Anees</h1>
+                                    <p>CEO, Kneems</p>
                                 </div>
                             </div>
                             <p id="commas">"</p>
                         </div>
                         <p id="testimonialText">
-                            Zohaib is a talented designer who has a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work.
-                        </p>
-                    </div>
-
-                    <div id="testimonialCard" data-scroll data-scroll-speed="4">
-                        <div id="testimonialHeader">
-                            <div id="testimonialSubHeader">
-                                <img src="./Assets/man1.PNG" id="personImage">
-                                <div id="testimonialAbout">
-                                    <h1>John Doe</h1>
-                                    <p>CEO, Company</p>
-                                </div>
-                            </div>
-                            <p id="commas">"</p>
-                        </div>
-                        <p id="testimonialText">
-                            Zohaib is a talented designer who has a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work.
+                            "Great work! I am very happy with the results. Zohaib is a talented designer who is easy to work with and produces high-quality work. He is very responsive and always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work."
                         </p>
                     </div>
 
                     <div id="testimonialCard" >
+                        <div class="hoverCircle">view</div>
                         <div id="testimonialHeader">
                             <div id="testimonialSubHeader">
-                                <img src="./Assets/man1.PNG" id="personImage">
+                                <img src="./Assets/man3.PNG" id="personImage">
                                 <div id="testimonialAbout">
-                                    <h1>John Doe</h1>
-                                    <p>CEO, Company</p>
+                                    <h1>Jesse Yao</h1>
+                                    <p>CEO, Redesign</p>
                                 </div>
                             </div>
                             <p id="commas">"</p>
                         </div>
                         <p id="testimonialText">
-                            Zohaib is a talented designer who has a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work.
+                            "Exceptional master of user expereinces. He is collaborative, creative, and a pleasure to work with. He is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work."
                         </p>
                     </div>
 
                     <div id="testimonialCard" >
+                        <div class="hoverCircle">view</div>
                         <div id="testimonialHeader">
                             <div id="testimonialSubHeader">
-                                <img src="./Assets/man1.PNG" id="personImage">
+                                <img src="./Assets/man4.PNG" id="personImage">
                                 <div id="testimonialAbout">
-                                    <h1>John Doe</h1>
-                                    <p>CEO, Company</p>
+                                    <h1>Umer</h1>
+                                    <p>CEO, Copy</p>
                                 </div>
                             </div>
                             <p id="commas">"</p>
                         </div>
                         <p id="testimonialText">
-                            Zohaib is a talented designer who has a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work.
+                            "An exceptional developer with a keen eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented developer who is easy to work with and produces high-quality work."
                         </p>
                     </div>
 
                     <div id="testimonialCard" >
+                        <div class="hoverCircle">view</div>
                         <div id="testimonialHeader">
                             <div id="testimonialSubHeader">
-                                <img src="./Assets/man1.PNG" id="personImage">
+                                <img src="./Assets/man5.PNG" id="personImage">
                                 <div id="testimonialAbout">
-                                    <h1>John Doe</h1>
-                                    <p>CEO, Company</p>
+                                    <h1>UXRkhan</h1>
+                                    <p>CEO, UXR</p>
                                 </div>
                             </div>
                             <p id="commas">"</p>
                         </div>
                         <p id="testimonialText">
-                            Zohaib is a talented designer who has a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented designer who is easy to work with and produces high-quality work.
+                            "Amazing frontend developer with a great eye for detail and a passion for creating beautiful things. He is a pleasure to work with and is always willing to go the extra mile to ensure that the client is happy with the end result. I would highly recommend him to anyone looking for a talented developer who is easy to work with and produces high-quality work."
                         </p>
-                    </div>
-                    
+                    </div>                 
                     
                 </div>
             </div>
+            <div id="progressBarContainer">
+                <div id="progressBar1"></div>
+            </div>
+        </div>
+        <div id="contactSection">
             
+            <div id="contactText">
+                <h1>Let's Talk About The Next Big Project</h1>
+            </div>
+            <button href="mailto:zhassan2312@gmail.com"class="contactButton1">
+                <span>Send a Message</span>
+            </button>
+            <button class="contactButton2">
+                <span>Got a project</span>
+            </button>
+            <div id="backgroundImage" data-scroll data-scroll-speed="-4" data-scroll-direction="vertical">
+                <img src="./Assets/contactBackground.png" alt="Background Image">
+            </div>
+            <div class="contact-info">
+                <div class="contact-links">
+                    <div class="contact-link" style="--order: 1;">
+                        <a href="https://www.behance.net/zhasasn2312" target="_blank"class="contact-link-item">
+                            <div class="contact-link-text">
+                                <p class="contact-link-title">Behance</p>
+                                <p class="contact-link-username">@zhassan2312</p>
+                            </div>
+                            <img src="./Assets/Icons/behance.svg" alt="Behance" class="contact-link-icon">
+                        </a>
+                    </div>
+                    <div class="contact-link" style="--order: 2;">
+                        <a href="https://dribbble.com/zhassan2312" target="_blank"class="contact-link-item">
+                            <div class="contact-link-text">
+                                <p class="contact-link-title">Dribbble</p>
+                                <p class="contact-link-username">@zhassan2312</p>
+                            </div>
+                            <img src="./Assets/Icons/dribbble.svg" alt="Instagram" class="contact-link-icon">
+                        </a>
+                    </div>
+                    <div class="contact-link" style="--order: 3;">
+                        <a href="https://github.com/zhassan2312"target="_blank" class="contact-link-item">
+                            <div class="contact-link-text">
+                                <p class="contact-link-title">Github</p>
+                                <p class="contact-link-username">@zhassan2312</p>
+                            </div>
+                            <img src="./Assets/Icons/github.svg" alt="Twitter" class="contact-link-icon">
+                        </a>
+                    </div>
+                    <div class="contact-link" style="--order: 4;">
+                        <a href="https://www.linkedin.com/in/zhassan2312/" target="_blank"class="contact-link-item">
+                            <div class="contact-link-text">
+                                <p class="contact-link-title">LinkedIn</p>
+                                <p class="contact-link-username">@zhassan2312</p>
+                            </div>
+                            <img src="./Assets/Icons/linkedin.svg" alt="Dribbble" class="contact-link-icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-footer">
+                    <p class="contact-footer-text">
+                        <span class="contact-footer-copyright">©2024 Zohaib Hassan, All rights reserved • </span>
+                        <span class="contact-footer-credits">Credits</span>
+                    </p>
+                    <div class="contact-footer-link">
+                        <a href="" data-router-disabled="" class="contact-footer-portfolio">2024 Portfolio</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
+    <div id="overlay" class="overlay"></div>
+<div id="dialogBox" class="dialog-box">
+    <div class="dialog-header">
+        <button id="closeButton" class="close-button contactButton1"><span>&times;</span></button>
+    </div>
+    <div class="dialog-content">
+        <div class="step" id="step1">
+            <iframe src="https://lottie.host/embed/c90847f7-b4e5-4523-9488-203d94d70706/nWGYUTL08q.json" class="helloIcon"></iframe> <!-- Font Awesome hand-help icon -->
+            <h2>Hi, there!</h2>
+            <p>Happy to see you here! How can I help you?</p>
+            <button id="nextToStep2" class="next-button contactButton1"><span>Next</span></button>
+        </div>
+        <div class="step" id="step2">
+            <h2>May I have your name?</h2>
+            <div class="input-container">
+                <img src="./Assets/Icons/bullet.svg" class="bulletIcon">
+                <input type="text" id="nameInput" placeholder="Your Name">
+            </div>
+                        
+            <button id="nextToStep3" class="next-button contactButton1"><span>Next</span></button>
+        </div>
+        <div class="step" id="step3">
+            <h2>What kind of project would you like me to craft for you?</h2>
+            
+
+            
+                <button class="option-button option1 contactButton1"><span>Web Design + Develop</span></button>
+                <button class="option-button option2 contactButton1"><span>Mobile Design</span></button>
+                <button class="option-button option3 contactButton1"><span>Web Design</span></button>
+                <button class="option-button option4 contactButton1"><span>Interaction Design</span></button>
+                <button class="option-button option5 contactButton1"><span>App Development + Design</span></button>
+           
+            <button id="nextToStep4" class="next-button contactButton1"><span>Next</span></button>
+        </div>
+        <div class="step" id="step4">
+            <h2>What budget range do you have in mind?</h2>
+            
+                <button class="option-button option1 contactButton1"><span>$500</span></button>
+                <button class="option-button option2 contactButton1"><span>$1000</span></button>
+                <button class="option-button option3 contactButton1"><span>$2000</span></button>
+            
+            <button id="nextToStep5" class="next-button contactButton1"><span>Next</span></button>
+        </div>
+        <div class="step" id="step5">
+            <h2>Awesome, How should I get in touch with you?</h2>
+            <div class="input-container">
+                <img src="./Assets/Icons/bullet.svg" class="bulletIcon">
+                <input type="text" id="nameInput" placeholder="Your Name">
+            </div>                        
+            <button id="submitForm" class="next-button contactButton1"><span>Submit</span></button>
+        </div>
+        <div class="step" id="thankYouStep">
+            <h2>Thank You!</h2>
+            <p>Your response has been recorded.</p>
+            <iframe src="https://lottie.host/embed/fa9d7f74-936d-4185-a348-92ae263df7c8/lHrcy197u8.json" class="congratsAnimation"></iframe>
+
+        </div>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -260,9 +353,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/video.js@8.17/dist/video.min.js"></script>
 
-
+    <script src="Scripts/projects.js"></script>
     <script src="Scripts/main.js"></script>
     <script src="Scripts/loader.js"></script>
+    <script src="Scripts/dialogue.js"></script>
     <script src="Scripts/button-animation.js"></script>
 </body>
 </html>

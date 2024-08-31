@@ -80,7 +80,7 @@ gsap.to(testimonialsWrapper, {
         end: () => "+=" + (testimonialsTotalWidth - window.innerWidth),
         onUpdate: self => {
             const progress = self.progress * 100;
-            document.querySelector("#progressBar").style.width = progress + "%";
+            document.querySelector("#progressBar1").style.width = progress + "%";
 
             Array.from(testimonialsItems).forEach(item => {
                 const scale = 1 - (self.progress * 0.2);
@@ -99,6 +99,7 @@ ScrollTrigger.create({
     trigger: ".testimonialsSection",
     start: "bottom bottom",
     end: "bottom top",
+    scrub:4,
     scroller: "#main",
     onEnter: () => locoScroll.update(),
     onLeaveBack: () => locoScroll.update(),
@@ -109,6 +110,15 @@ ScrollTrigger.create({
     trigger: ".testimonialsSection",
     scroller: "#main",
     onEnter: () => document.body.classList.add("dark-theme"),
+    onLeaveBack: () => document.body.classList.remove("dark-theme"),
+
+});
+
+ScrollTrigger.create({
+    trigger: "#contactSection",
+    scroller: "#main",
+    onEnter: () => document.body.classList.remove("dark-theme"),
+    onLeaveBack: () => document.body.classList.add("dark-theme"),
 
 });
 
@@ -308,7 +318,7 @@ ScrollTrigger.create({
                 scrub: 0.15,
                 trigger: `#myCanvas`,
                 start: `top top`,
-                end: `190% top`,
+                end: `185% top`,
                 scroller: `#main`,
             },
             onUpdate: render,
@@ -325,24 +335,11 @@ ScrollTrigger.create({
             pin: true,
             scroller: `#main`,
             start: `top top`,
-            end: `190% top`,
+            end: `185% top`,
         });
     } else {
         console.error("Canvas element not found");
     }
-
-    const portfolioVideos = document.querySelectorAll("#portfolioVideo");
-
-    portfolioVideos.forEach(video => {
-        video.addEventListener("mouseenter", () => {
-            video.play();
-        });
-
-        video.addEventListener("mouseleave", () => {
-            video.pause();
-            video.currentTime = 0; // Reset video to start
-        });
-    });
 
     // Apply hover effect to paragraph spans
     const p = document.querySelector('#horizontalHeader p');
@@ -391,7 +388,7 @@ function addHoverEffect(spans) {
         repeat: -1,
         yoyo: true,
         onRepeat: () => {
-          const randomColor = Math.random() > 0.5 ? '#BCAD87' : '#171717';
+          const randomColor = Math.random() > 0.5 ? '#3451d2' : '#171717';
           const randomSkew = (Math.random() - 0.5) * 10; // Random skew between -5 and 5 degrees
           const randomTranslate = (Math.random() - 0.5) * 20; // Random translate between -10px and 10px
           span.style.color = randomColor;
@@ -432,3 +429,101 @@ function scaleImage(img, ctx) {
     img.height * ratio
   );
 }
+// Ensure GSAP is included in your project
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+const testimonialCards = document.querySelectorAll('#testimonialCard');
+
+testimonialCards.forEach(card => {
+    const personImage = card.querySelector('#personImage');
+    const testimonialText = card.querySelector('#testimonialText');
+
+    card.addEventListener('mouseenter', () => {
+        gsap.to(personImage, {
+            scale: 1.8,
+            duration: 0.3,
+            ease: "power1.inOut"
+        });
+        gsap.to(card, {
+            duration: 0.3,
+            scale: 1.2,
+            ease: "power1.inOut",
+            transformPerspective: 2000,
+            transformOrigin: "center center",
+            rotationY: 4,
+            rotationX: 4
+        });
+        gsap.to(testimonialText, {
+            fontSize: '1.5vw',
+            duration: 0.3,
+            ease: "power1.inOut"
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        gsap.to(personImage, {
+            scale: 1,
+            duration: 0.3,
+            ease: "power1.inOut"
+        });
+        gsap.to(card, {
+            duration: 0.3,
+            className: "-=invert-colors",
+            ease: "power1.inOut"
+        });
+        gsap.to(card, {
+            duration: 0.3,
+            scale: 1,
+            width: '60vw',
+            boxShadow: '0px 0px 0px rgba(0, 0, 0, 0)',
+            ease: "power1.inOut",
+            rotationY: 0,
+            rotationX: 0
+        });
+        gsap.to(testimonialText, {
+            fontSize: '1vw',
+            duration: 0.3,
+            ease: "power1.inOut"
+        });
+    });
+});
+
+
+
+
+let currentScroll = 0;
+let isScrollingDown = true;
+
+let tween = gsap.to('.marquee-part', {
+    xPercent: -100,
+    repeat: -1,
+    duration: 20,
+    ease: "linear",
+}).totalProgress(0.5);
+
+gsap.set('.marquee-inner', {
+    xPercent: -50
+});
+
+// Initialize ScrollTrigger
+ScrollTrigger.create({
+    trigger: '#main',
+    start: 'top top',
+    scroller:'#main',
+    end: 'bottom bottom',
+    onUpdate: (self) => {
+        const scrollTop = self.scroll();
+        
+        if (scrollTop > currentScroll) {
+            isScrollingDown = true;
+        } else {
+            isScrollingDown = false;
+        }
+
+        gsap.to(tween, {
+            timeScale: isScrollingDown ? 4 : -4, // Speed up forward and reverse
+        });
+
+        currentScroll = scrollTop;
+    }
+});
