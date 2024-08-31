@@ -71,7 +71,6 @@
                 <h1 id="portfolioHeading">${project.title}</h1>
                 <video id="portfolioVideo" src="${project.video}" type="video/mp4"></video>
                 <p id="portfolioType">${project.type}</p>
-                <div class="hoverCircle">view</div>
             </div>
         `;
     });
