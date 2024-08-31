@@ -28,7 +28,7 @@
 {
     font-family: var(--font1);
     font-size:4.5vw;
-    color: var(--black10);
+    color: var(--white);
 }
 
 #leftContainer h1 span
@@ -40,7 +40,7 @@
 {
     font-family: var(--font2);
     font-size: 1vw;
-    color: var(--black20);
+    color: var(--white);
 }
 
 #leftContainer button
