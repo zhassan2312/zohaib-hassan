@@ -1,5 +1,5 @@
 /* General primaryButton Styles */
-.primaryButton {
+.primaryButton,.contactButton1,.contactButton2 {
     font-family: var(--font1);
     display: flex;
     align-items: center;
@@ -9,7 +9,7 @@
     position: relative; /* Ensure position is relative for pseudo-elements */
 }
 
-.primaryButton::before {
+.primaryButton::before,.contactButton1::before,.contactButton2::before {
     content: '';
     position: absolute;
     bottom: 0; /* Start from the bottom */
@@ -23,12 +23,12 @@
     z-index: 0;
 }
 
-.primaryButton:hover::before {
+.primaryButton:hover::before,.contactButton1:hover::before,.contactButton2:hover::before {
     transform: translate(-50%, 0) scale(1.2); /* Animate from bottom to center */
 
 }
 
-.primaryButton span {
+.primaryButton span,.contactButton1 span,.contactButton2 span{
     position: relative;
     z-index: 1;
 }

@@ -1,22 +1,20 @@
 #slider {
     width: 100%;
-    overflow: hidden;
     height: 100vh;
     position: relative;
     background-color: var(--white);
+    overflow: hidden;
 }
 
 #sliderWrapper {
-    display: inline-flex; /* Allow horizontal scrolling */
+    display: inline-flex;
     width: max-content;
-    padding: 0 128px 0 0;
+    padding: 0 128px;
     height: 100%;
     align-items: center;
     justify-content: center;
     gap: 200px;
-    background-color: var(--white);
 }
-
 
 #horizontalSection {
     position: relative;
@@ -30,14 +28,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3vw; /* Adjust gap based on viewport width */
-    width: 30vw; /* Adjust width based on viewport width */
-    height: auto;
+    gap: 3vw;
+    width: 30vw;
     border-radius: 8px;
 }
 
 #portfolioHeading {
-    font-size: 3vw; /* Adjust font size based on viewport width */
+    font-size: 3vw;
     font-family: var(--font1);
     font-weight: 200;
     color: var(--black);
@@ -45,7 +42,7 @@
 }
 
 #portfolioType {
-    font-size: 1.5vw; /* Adjust font size based on viewport width */
+    font-size: 1.5vw;
     font-family: var(--font2);
     color: var(--black60);
     transition: color 0.5s;
@@ -53,9 +50,9 @@
 
 #portfolioVideo {
     width: 100%;
-    height: auto; /* Adjust height automatically to maintain aspect ratio */
-    object-fit: cover; /* Ensure the video covers the entire container */
-    aspect-ratio: 4 / 3; /* Maintain 4:3 aspect ratio */
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
     opacity: 50%;
     transition: opacity 1s, transform 1s;
 }
@@ -63,14 +60,9 @@
 #portfolio:hover #portfolioVideo {
     opacity: 1;
     transform: scale(1.4);
-    z-index: 3;
-    position: relative;
 }
 
-#portfolio:hover #portfolioHeading {
-    color: var(--white);
-}
-
+#portfolio:hover #portfolioHeading,
 #portfolio:hover #portfolioType {
     color: var(--white);
 }
@@ -81,21 +73,17 @@
     align-items: flex-start;
     margin-left: 10vw;
     margin-top: 30vh;
-    vertical-align: center;
     width: 100vw;
     height: 100vh;
 }
 
 #horizontalHeader h1 {
-    font-size: 15vw; /* Adjust font size based on viewport width */
+    font-size: 15vw;
     font-family: var(--font1);
     font-weight: bold;
     color: var(--black);
-    transition: color 0.5s, -webkit-text-stroke-color 0.5s;
+    transition: color 0.5s;
     position: relative;
-    display: inline-block;
-    overflow: hidden;
-    transform-style: preserve-3d;
 }
 
 #horizontalHeader h1 span {
@@ -103,22 +91,19 @@
 }
 
 #horizontalHeader p {
-    font-size: 9vw; /* Adjust font size based on viewport width */
+    font-size: 9vw;
     font-family: var(--font1);
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--black);
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
 }
 
 #horizontalHeader button {
     font-family: var(--font1);
-    font-size: 1.5vw; /* Adjust font size based on viewport width */
+    font-size: 1.5vw;
     color: var(--white);
     background-color: var(--black);
-    padding: 0.5vw 1vw; /* Adjust padding based on viewport width */
+    padding: 0.5vw 1vw;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -133,13 +118,11 @@
     background-color: var(--black10);
 }
 
-#progressBar,#progressBar1 {
+#progressBar {
     border-radius: 8px;
-    width: 0;
     height: 100%;
     background-color: var(--black);
 }
-
 
 /* Style for the hover circle */
 .hoverCircle {
@@ -153,8 +136,8 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    pointer-events: none; /* Prevents the circle from interfering with hover events */
+    pointer-events: none;
     opacity: 0;
-    z-index: 1000; /* Ensure it is above other elements */
+    z-index: 1000;
     transform: translate(-50%, -50%);
 }
