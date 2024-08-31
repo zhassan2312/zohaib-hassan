@@ -27,16 +27,19 @@
     align-items: center;
 }
 
-#menu img
-{
+#menu {
+    display: flex;
+    gap: 1vw; /* Add space between icons */
+}
+
+#menu img {
     width: 2vw;
     height: 2vw;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-#menu img:hover
-{
+#menu img:hover {
     width: 3vw;
     height: 3vw;
 }
