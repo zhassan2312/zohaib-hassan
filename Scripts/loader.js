@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                                     opacity: 1,
                                                     onComplete: () => {
                                                         
-                                                                        loaderText.textContent = "interactive";
+                                                                        loaderText.textContent = "Code x Design";
                                                                         gsap.to(loaderText, {
                                                                             duration: 0.2,
                                                                             opacity: 0,
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                                                                     duration: 0,
                                                                                     opacity: 1,
                                                                                     onComplete: () => {
-                                                                                        loaderText.textContent = "world";
+                                                                                        loaderText.textContent = "By Zohaib";
                                                                                         gsap.to(loaderText, {
                                                                                             duration: 0.2,
                                                                                             opacity: 0,
