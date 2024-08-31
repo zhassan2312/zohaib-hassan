@@ -104,6 +104,7 @@
     font-family: var(--font1);
     text-transform: uppercase;
     position: relative;
+    text-decoration: none;
     overflow: hidden;
     background-color: transparent;
     transition: color 0.6s cubic-bezier(0, 0.89, 0.41, 1), padding 0.6s cubic-bezier(0, 0.89, 0.41, 1);
