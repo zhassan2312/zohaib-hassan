@@ -42,7 +42,7 @@ let projects = [
     {
         video: './Assets/Portfolio/Plants animation websites.mp4',
         title: 'Plantate',
-        type: 'Interaction Desing'
+        type: 'Interaction Design'
     },
     {
         video: './Assets/Portfolio/Codexcue.mp4',
@@ -727,62 +727,8 @@ items.forEach(item => {
 });
 
 
-const buttons = document.querySelectorAll('.primaryButton','#horizontalHeader button','#menu img');
 
-buttons.forEach(button => {
-    const buttonText = button.querySelector('span'); // Assuming the text is inside a <span> element
-
-    let boundingRect = button.getBoundingClientRect();
-
-    window.addEventListener('resize', () => {
-        boundingRect = button.getBoundingClientRect();
-    });
-
-    button.addEventListener('mousemove', (e) => {
-        const mousePosX = e.clientX - boundingRect.left;
-        const mousePosY = e.clientY - boundingRect.top;
-
-        const offsetX = (mousePosX - boundingRect.width / 2) * 0.4;
-        const offsetY = (mousePosY - boundingRect.height / 2) * 0.4;
-
-        gsap.to(button, {
-            x: offsetX,
-            y: offsetY,
-            stagger: -0.1,
-            duration: 0.8,
-            ease: 'power3.out',
-        });
-
-        gsap.to(buttonText, {
-            x: offsetX * 0.5, // Adjusted to move less than the button itself
-            y: offsetY * 0.5, // Adjusted to move less than the button itself
-            stagger: -0.1,
-            duration: 0.8,
-            ease: 'power3.out',
-        });
-    });
-
-    button.addEventListener('mouseleave', () => {
-        gsap.to(button, {
-            x: 0,
-            y: 0,
-            stagger: -0.1,
-            duration: 0.8,
-            ease: 'elastic.out(1, 0.3)',
-        });
-
-        gsap.to(buttonText, {
-            x: 0,
-            y: 0,
-            stagger: -0.1,
-            duration: 0.8,
-            ease: 'elastic.out(1, 0.3)',
-        });
-    });
-
-});
-
-const contactButtons = document.querySelectorAll('.contactButton1, .contactButton2','.contact-link-item','#menu img','#horizontalHeader button','.next-button','.option-button');
+const contactButtons = document.querySelectorAll('.primaryButton');
 
 contactButtons.forEach((button) => {
     const text = button.querySelector('span');
@@ -796,8 +742,8 @@ contactButtons.forEach((button) => {
         // Button magnetic effect
         gsap.to(button, {
             duration: 0.3,
-            x: x * 0.1,
-            y: y * 0.1,
+            x: x * 0.2,
+            y: y * 0.2,
             stagger: -0.1,
             ease: "power2.out"
         });
@@ -805,8 +751,8 @@ contactButtons.forEach((button) => {
         // Text magnetic effect
         gsap.to(text, {
             duration: 0.3,
-            x: x *0.4,
-            y: y *0.4,
+            x: x *0.2,
+            y: y *0.2,
             color: "white",
             stagger: -0.1,
             ease: "power2.out"

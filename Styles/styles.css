@@ -269,6 +269,7 @@
     background-color: var(--black);
     border-radius: 100%;
     width:10vw;
+    position: relative;
     border: none;
     height: 10vw;
     z-index: 2;
@@ -516,21 +517,21 @@ html,body
 }
 
 #slider {
-    width: 100%;
     overflow: hidden;
+    width: 100%;
     height: 100vh;
     position: relative;
     background-color: var(--white);
 }
 #sliderWrapper {
-    display: inline-flex; /* Allow horizontal scrolling */
+    display: flex; /* Allow horizontal scrolling */
     width: max-content;
-    padding: 0 128px 0 0;
+    padding: 0 10vw 0 0;
     height: 100%;
     vertical-align: center;
     align-items: center;
     justify-content: center;
-    gap: 200px;
+    gap: 12vw;
     background-color: var(--white);
 }
 #horizontalSection {
@@ -728,7 +729,7 @@ html,body
     align-items: center;
     justify-content: center;
 
-    position: relative;
+    position: absolute;
     height: 5vw;
     overflow: hidden;
     z-index: 2;
@@ -741,7 +742,7 @@ html,body
 }
 
 .contactButton2 {
-    top: 47.3%;
+    top: 56%;
     left: 50%;
 }
 
@@ -1152,17 +1153,16 @@ html,body
 }
 
 /* General primaryButton Styles */
-.primaryButton,.contactButton1,.contactButton2 {
+.primaryButton {
     font-family: var(--font1);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     cursor: none;
-    position: relative; /* Ensure position is relative for pseudo-elements */
 }
 
-.primaryButton::before,.contactButton1::before,.contactButton2::before {
+.primaryButton::before {
     content: '';
     position: absolute;
     bottom: 0; /* Start from the bottom */
@@ -1176,12 +1176,12 @@ html,body
     z-index: 0;
 }
 
-.primaryButton:hover::before,.contactButton1:hover::before,.contactButton2:hover::before {
+.primaryButton:hover::before {
     transform: translate(-50%, 0) scale(1.2); /* Animate from bottom to center */
 
 }
 
-.primaryButton span,.contactButton1 span,.contactButton2 span{
+.primaryButton span{
     position: relative;
     z-index: 1;
 }
