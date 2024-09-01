@@ -25,7 +25,7 @@
     height: 5vw;
     overflow: hidden;
     z-index: 2;
-    cursor: pointer;
+    cursor: none;
 }
 
 .contactButton1 {
@@ -222,7 +222,7 @@
 
 .contact-footer-credits {
     text-decoration: underline solid var(--white);
-    cursor: pointer;
+    cursor: none;
 }
 
 
@@ -276,7 +276,7 @@
     display: flex;
     max-height: 4vw;
     font-size: 3vw;
-    cursor: pointer;
+    cursor: none;
 }
 
 .dialog-content {
@@ -298,7 +298,7 @@
     border: none;
     font-family: var(--font1);
     border-radius: 4vw;
-    cursor: pointer;
+    cursor: none;
 } 
 
 .next-button
@@ -394,7 +394,7 @@
     border-radius: 4vw;
     width: 20vw;
     height: 3vw;
-    cursor: pointer;
+    cursor: none;
 }
 
 

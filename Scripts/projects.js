@@ -69,7 +69,7 @@
         projectHTML += `
             <div id="portfolio">
                 <h1 id="portfolioHeading">${project.title}</h1>
-                <video id="portfolioVideo" src="${project.video}" type="video/mp4"></video>
+                <video rel="preload" id="portfolioVideo" src="${project.video}" type="video/mp4"></video>
                 <p id="portfolioType">${project.type}</p>
             </div>
         `;

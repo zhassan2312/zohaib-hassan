@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    cursor: pointer;
+    cursor: none;
     position: relative; /* Ensure position is relative for pseudo-elements */
 }
 

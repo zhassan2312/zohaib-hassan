@@ -107,7 +107,7 @@
     padding: 0.5vw 1vw; /* Adjust padding based on viewport width */
     border-radius: 8px;
     border: 1px solid var(--black);
-    cursor: pointer;
+    cursor: none;
 }
 
 #progressBarContainer {
